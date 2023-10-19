@@ -8,8 +8,6 @@ import { ChatpageComponent } from './chatpage/chatpage.component';
 import { UsernameComponent } from './username/username.component';
 import { NavmenuComponent } from './navmenu/navmenu.component';
 import { AnalyticsComponent } from './analytics/analytics.component';
-import { DesignComponent } from './design/design.component';
-import { HrComponent } from './hr/hr.component';
 import {ChatDataService} from './service/chatdata.service';
 import { FormsModule } from '@angular/forms'; 
 
@@ -20,8 +18,6 @@ import { FormsModule } from '@angular/forms';
     UsernameComponent,
     NavmenuComponent,
     AnalyticsComponent,
-    DesignComponent,
-    HrComponent,
   ],
   imports: [
     BrowserModule,

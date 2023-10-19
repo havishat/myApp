@@ -10,14 +10,12 @@
       <br>
       <div class="chat-messages" style="margin-left: 13.5%; margin-top: 20px;">
         <div class="chat-messages-show-container">
-          <div class="chat-messages-show-list" *ngFor='let chat of messageChat' >
-            <p *ngIf='name  != chat.name'>{{chat.name}}</p>
-            <!-- <p class="oval" style="margin-left: 10px;"  *ngIf='name != chat.name'>{{chat.message}}</p> -->
-          </div>
+          <!-- <div class="chat-messages-show-list" *ngFor='let chat of messageChat' >
+             <p *ngIf='name  != chat.name'>{{chat.name}}</p> -->
+            <!-- <p class="oval" style="margin-left: 10px;"  *ngIf='name != chat.name'>{{chat.message}}</p> 
+          </div> -->
           <P>{{name}}</P>
-          <p style="color: white;  margin-left: 67%;
-           height: auto; padding: 3%;
-          width: auto; border-radius: 35%; background-color: red;" *ngFor='let m of chatMessage'>{{m.message}}</p>
+          <p style="color: white;  margin-left: 67%;" *ngFor='let m of message'>{{m}}</p>
         </div>
         <div style="margin-top: 30px;">
           <!-- <form class="input_msg_write" (Submit)="sendMessage()"> -->

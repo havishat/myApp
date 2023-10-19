@@ -18,6 +18,7 @@ export class AnalyticsComponent implements OnInit {
   id: 0 | undefined;
   roomsUsers: any;
   message: any;
+  chatMap: any;
 
   constructor(private chatDataService: ChatDataService) {
     this.message = [];
@@ -52,11 +53,9 @@ export class AnalyticsComponent implements OnInit {
 
     this.chatMessage.name = this.chatDataService.name;
     this.chatMessage.id = Math.random().toString(36).substring(7);
-    console.log("hel", this.chatMessage)
-    this.chatDataService.postMessage(this.chatMessage)
-    this.chatDataService.postUsers(this.chatMessage)
-       
-    this.message.push(this.chatMessage.message);
+    this.chatMap = this.chatDataService.postMessage(this.chatMessage)
+    console.log(this.chatMap)
+    this.message.push(this.chatMessage);
     this.roomsUsers.push(this.chatMessage.name);
     console.log("mess", this.message)
   }

@@ -27,12 +27,12 @@ export class ChatDataService {
   //   return this.httpClient.get(baseUrlWithVersion);
   // }
 
-  public getRoomsUsers(id: any) {
-    // const baseUrlWithVersion = 'http://localhost:8080/api/rooms/';
-    // return this.httpClient.get(baseUrlWithVersion + `${id}`);
+  // public getRoomsUsers(id: any) {
+  //   // const baseUrlWithVersion = 'http://localhost:8080/api/rooms/';
+  //   // return this.httpClient.get(baseUrlWithVersion + `${id}`);
     
-    return  localStorage.getItem(this.session.id);
-  }
+  //   return  localStorage.getItem(this.session.id);
+  // }
 
   public postMessage(messageRequest: ChatMessageRequest) {
    // const baseUrlWithVersion = 'http://localhost:8080/api/rooms/' + `${this.loginobject.id}`;
@@ -53,9 +53,9 @@ export class ChatDataService {
    return localStorage.setItem(messageRequest.id, messageRequest.message);
   }
 
-  public postUsers(messageRequest: ChatMessageRequest){
-    return localStorage.setItem(messageRequest.id, messageRequest.name)
-  }
+  // public postUsers(messageRequest: ChatMessageRequest){
+  //   return localStorage.setItem(messageRequest.id, messageRequest.name)
+  // }
 
   public getChatMessage(id: any) {
     // const baseUrlWithVersion = 'http://localhost:8080/api/rooms/' + `${this.loginobject.id}`;
