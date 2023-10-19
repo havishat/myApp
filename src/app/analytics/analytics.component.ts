@@ -41,7 +41,7 @@ export class AnalyticsComponent implements OnInit {
 
   getData(){
     this.messageChat = this.chatDataService.getChatMessage(this.chatMessage.id)
-    console.log("chat", this.messageChat)
+    this.chatMap;
   }
 
   sendMessage() {
@@ -54,10 +54,8 @@ export class AnalyticsComponent implements OnInit {
     this.chatMessage.name = this.chatDataService.name;
     this.chatMessage.id = Math.random().toString(36).substring(7);
     this.chatMap = this.chatDataService.postMessage(this.chatMessage)
-    console.log(this.chatMap)
     this.message.push(this.chatMessage);
     this.roomsUsers.push(this.chatMessage.name);
-    console.log("mess", this.message)
   }
 
 }
