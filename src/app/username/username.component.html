@@ -1,0 +1,16 @@
+<div class="container">
+  <form (submit)="onSubmit()"#formData='ngForm'>
+    <div class="center">
+      <input placeholder="Type your username..."
+      name='name'
+      class='long'
+      type="text"
+      required
+      minlength="3"
+      [(ngModel)]="chatMessage.name"
+      />
+      <br>
+      <input  class="button" type="submit" value="Join the DoorDash Chat">
+    </div>
+  </form>
+</div>

@@ -1,0 +1,20 @@
+<main class="container-fluid no-padding" role="main" >
+  <div class="chat-messages">
+    <div class="chat-messages-show-container" style="overflow: hidden; overflow-y: auto; margin-left: 11%;">
+      <ul class="chat-messages-show-list">
+      </ul>
+    </div>
+    <div class="type_msg" style="margin-left: 80%;">
+      <form class="input_msg_write" (ngSubmit)="sendMessage()">
+        <input
+          type="text"
+          class="write_msg"
+          placeholder="Type a message"
+        />
+        <button class="msg_send_btn" type="button">
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+</main>

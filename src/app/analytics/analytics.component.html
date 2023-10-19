@@ -1,0 +1,41 @@
+
+<main class="container-fluid no-padding" role="main" style="padding-left: 1%;">
+  <div>
+      <!-- <h2 style="margin-left:51%; margin-bottom: 0px; color: lightgray">{{roomsUsers.name}}</h2> -->
+      <p style="margin-left:48%; display: inline-block;
+      color: red">{{name}}</p>
+      <div style=" display: inline-block;" *ngFor='let userList of roomsUsers'>
+        <P *ngIf='name  != userList'>, {{userList}}</P>
+      </div>
+      <br>
+      <div class="chat-messages" style="margin-left: 13.5%; margin-top: 20px;">
+        <div class="chat-messages-show-container">
+          <div class="chat-messages-show-list" *ngFor='let chat of messageChat' >
+            <p *ngIf='name  != chat.name'>{{chat.name}}</p>
+            <!-- <p class="oval" style="margin-left: 10px;"  *ngIf='name != chat.name'>{{chat.message}}</p> -->
+          </div>
+          <P>{{name}}</P>
+          <p style="color: white;  margin-left: 67%;
+           height: auto; padding: 3%;
+          width: auto; border-radius: 35%; background-color: red;" *ngFor='let m of chatMessage'>{{m.message}}</p>
+        </div>
+        <div style="margin-top: 30px;">
+          <!-- <form class="input_msg_write" (Submit)="sendMessage()"> -->
+            <form (submit)="sendMessage()"#formData='ngForm'>
+              <input
+                name='message'
+                class='long'
+                type="text"
+                required
+                minlength="3"
+                [(ngModel)]="chatMessage.message"
+                style="width: 90%; height: 30px; margin-left: 30px;"
+                />
+                <input  class="button" type="submit" value="Submit">
+              <!-- <input type="submit" style="color:rgb(22, 176, 228) ; font-size: 15px; background-color: white; height: 30px; border: 0px;" value="Submit"> -->
+            </form>  
+        </div>
+      </div>
+  </div>
+  
+</main>

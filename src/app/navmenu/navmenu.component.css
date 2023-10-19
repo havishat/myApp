@@ -1,0 +1,73 @@
+h3{
+    color: white;
+    padding-left: 20px;
+}
+p {
+  color: white;
+  padding-left: 20px;
+}
+.navbar-primary {
+  bottom: 0px;
+  left: 0px;
+  position: absolute;
+  top: 1px;
+  width: 14rem;
+  z-index: 8;
+  overflow: hidden;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+  .navbar-primary.collapsed {
+    width: 3rem;
+  }
+
+  .navbar-primary.collapsed .nav-label {
+    display: none;
+  }
+
+.navbar-primary-menu,
+.navbar-primary-menu li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+  .navbar-primary-menu li a:not(.sub-nav) {
+    display: block;
+    padding: 10px 18px 10px 3px;
+    text-align: left;
+    color: white;
+  }
+
+  .navbar-primary-menu li a:hover {
+    background-color: darkred;
+    text-decoration: none;
+    color: white;
+  }
+
+.main-not-collapsed {
+  padding-left: 14.1rem;
+}
+
+
+.navbar-primary-menu li.active {
+  background-color: rgb(198,198,198);
+}
+
+.navbar-primary-menu li > a > span:first-child {
+  border-left: 5px solid transparent;
+  padding-left: 10px;
+}
+
+.navbar-primary-menu li.active > a > span:first-child {
+  border-left: 5px solid rgb(0, 120, 212);
+}
+
+.navbar-primary-menu > li li.nav-item > a {
+  padding-left: 45px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
